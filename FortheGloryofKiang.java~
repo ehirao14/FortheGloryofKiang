@@ -2,30 +2,19 @@ public class FortheGloryofKiang
 {
   public static void main(String[] args)
   {
-    String[][] kiangArray = new String[3][9];
+    String[][] KiangArray = new String[3][9];
     int player1 = 1; //makes 3 ints to be placemakers for the games for 3 players
     int player2 = 2;
     int player3 = 3;
     
     boolean gameOver = false;
-    int current; //makes sure that only one player can make a move
-    int turns; //takes note of turns so that the program knows who will go next
+    
     while(!gameOver)
     {
       //check if any possibilty that someone won (this is be ginormous)
-      Table(kiangArray);
-      turns++;
-      if (turns%3==0)
-      {
-        current=player1;
-      }
-      else if (turns%3==1)
-      {
-        current=player2;
-      }
-      else current=player3;
+      Table(KiangArray);
+      //let first player go
     }
-    
   }
   public static void Table(String[][] array)
   {
@@ -44,7 +33,7 @@ public class FortheGloryofKiang
   }
   public static void player1()
   {
-    kiangArray[2][6] = "1";
-    Table(kiangArray);
+    KiangArray[2][6] = "1";
+    Table(KiangArray);
   }
 }
