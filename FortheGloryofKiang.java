@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class FortheGloryofKiang
 {
+  Scanner kb = new Scanner(System.in); 
   private static Piece[][] kiangArray = new Piece [4][16];
   {
     kiangArray[0][0] = new Piece ("|01|", 1, 16);
@@ -81,12 +82,12 @@ public class FortheGloryofKiang
     int turns = 0; //takes note of turns so that the program knows who will go next
     display(kiangArray);
     
-        while (gameOver == false)
+    while (gameOver == false)
     {
-      display(kiangArray);
+      playGame();
     }
     System.out.println("Game over.");
-
+    
   }
   public void display(Piece[][] array)
   {
@@ -104,18 +105,57 @@ public class FortheGloryofKiang
     }
   }
   
-  public void checkGame()
+  public void player1()
+  {
+    System.out.println("Enter the number you wish to fill.");
+    int num1 = kb.nextInt(); 
+    check();
+    if (check==true)
+    {
+      replace1();
+    }
+    else player1();
+  }
+  public void player2()
+  {
+    System.out.println("Enter the number you wish to fill.");
+    int num2 = kb.nextInt();
+    check();
+    if (check==true)
+    {
+      replace2();
+    }
+    else player2();
+  }
+  public void player3()
+  {
+    System.out.println("Enter the number you wish to fill.");
+    int num3 = kb.nextInt();
+    check();
+    if (check==true)
+    {
+      replace3();
+    }
+    else player3();
+  }
+  public boolean check()
   {
     
   }
-  public void player1()
+  public void replace1()
   {
-    display(kiangArray);
+  }
+  public void replace2
+  {
+  }
+  public void replace3()
+  {
   }
   public void playGame()
   {
     display(kiangArray);
-    int turns=turns+1;
+    int turns;
+    turns=turns+1;
     if (turns%3==0)
     {
       player1();
